@@ -11,20 +11,20 @@ class grid extends Component {
         <div className="grid">
             <Grid  stackable>
                 <Grid.Row>
-                <Image src={this.props.github} avatar />
-                <span className='shift'>www.github.com/jaimejgonzalez1</span>
+                <Image as='a'src={this.props.github} avatar />
+                <a href="https://github.com/jaimejgonzalez1" target="_blank" className='shift'>www.github.com/jaimejgonzalez1</a>
                 </Grid.Row>
                 <Grid.Row>
-                <Image src={this.props.link} avatar />
-                <span className='shift'>www.linkedin.com/in/jaimejgonzalez-1</span>
+                <Image as='a'src={this.props.link} avatar />
+                <a href="https://www.linkedin.com/in/jaimejgonzalez-1/" target="_blank" className='shift'>www.linkedin.com/in/jaimejgonzalez-1</a>
                 </Grid.Row>
+                {/* <Grid.Row>
+                <Image as='a' src={this.props.res} avatar />
+                <a href="#" target="_blank" className='shift'>MyResume.pdf</a>
+                </Grid.Row> */}
                 <Grid.Row>
-                <Image src={this.props.res} avatar />
-                <span className='shift'>MyResume.pdf</span>
-                </Grid.Row>
-                <Grid.Row>
-                <Image src={this.props.mail}  avatar />
-                <span className='shift'>hello@jaimejgonzalez.com</span>
+                <Image as='a' src={this.props.mail}  avatar />
+                <a href="mailto:hello@jaimejgonzalez.com?Subject=Hello!"  className='shift'>hello@jaimejgonzalez.com</a>
                 </Grid.Row>
        
             </Grid>

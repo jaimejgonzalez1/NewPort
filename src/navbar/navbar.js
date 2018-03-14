@@ -59,7 +59,7 @@ class navbar extends Component {
             <SmallGrid github= {Github} link ={LinkedIn} res={UP} mail={Mail}  />
             </div>
           ): activeItem === 'WORKS' ? (
-            <Work big="WORKS"/>
+            <Work big="WORKS."/>
           ): null}
      
 
