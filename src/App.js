@@ -11,8 +11,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar /> */}
-        <Mac/>
+        <Navbar />
+        {/* <Mac/> */}
       </div>
     );
   }

@@ -1,0 +1,44 @@
+.cardContainer{
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+.rCard  {
+    width: 40vw;
+    display: flex;
+    justify-content: flex-start;
+    /* align-items: center;
+    align-content: center; */
+    padding: 1%;
+    flex-wrap: nowrap;
+
+}
+.rsideText{
+/* flex-basis: 100%; */
+text-align: left;
+font-size: 1.5rem;
+font:400;
+}
+
+.fade-enter {
+opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+opacity: 1;
+transition: opacity 1000ms ease-in;
+}
+@media(max-width:600px){
+.rCard{
+  width: 100vw;
+  justify-content: center;
+  padding: 0 10% 0 10%;
+}
+.sideText{
+  display: none;
+}
+.hero1{
+  color:white;
+}
+}

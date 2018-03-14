@@ -1,0 +1,11 @@
+.grid{
+    width: 50vw;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    align-content: center;
+    padding: 1%;
+    font-size: 1.2em;
+    flex-wrap: nowrap;
+}
+.shift{margin: 1%;}

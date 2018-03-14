@@ -19,7 +19,7 @@ export default scene => {
         new THREE.LineBasicMaterial()
     );
 
-    group.add(subjectMesh);
+    // group.add(subjectMesh);
     group.add(subjectWireframe);
     scene.add(group);
 
@@ -30,7 +30,8 @@ export default scene => {
 
     function deformGeometry(geometry) {
         for (let i=0; i<geometry.vertices.length; i+=2) {
-            const scalar = 1 + Math.random()*0.8;
+            // const scalar = 1;
+            const scalar = 1 + Math.random()*0.2;
             geometry.vertices[i].multiplyScalar(scalar)
         }
 
