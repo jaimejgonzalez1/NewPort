@@ -1,0 +1,8 @@
+{
+  "short_name": "Jaime Gonzalez",
+  "name": "Jaime Gonzalez | Full Stack Developer",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
