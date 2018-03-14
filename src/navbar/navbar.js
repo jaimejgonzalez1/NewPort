@@ -81,17 +81,29 @@ class navbar extends Component {
         <Visibility>
         <Segment textAlign='center' style={{ minHeight: 700, padding: '7em 0em' }} vertical>
         {activeItem === 'JAIME GONZALEZ' ? (
-            <Hero big='Hello.' para="Come check out my work!"/>
+            <div>
+            <Hero small="Jaime Gonzalez | Full Stack Developer"/>
+            <Hero big="Hello."para="Come check out my work!"/>
+            </div>
           ) : activeItem === 'ABOUT' ? (
-            <Hero big='SECOND HELLO.'/>
+            <div>
+            <Hero big='ABOUT.'/>
+          
+            <RightCard para="I am a full-stack Software Developer with a focus on front-end technologies.
+            My most recent projects have been built in React, Node, and MongoDB however I started with 
+            Angular,.NET, and Sql Server but I'm very flexible to implement any technology that suits the project. 
+            "/>
+            </div>
           ): activeItem === 'CONTACT' ? (
-            <Hero big='FOURTH HELLO.'/>
+            <div>
+            <Hero big='CONTACT.' small="You can reach me anywhere"/>
+            <SmallGrid github= {Github} link ={LinkedIn} res={UP} mail={Mail}  />
+            </div>
           ): activeItem === 'WORKS' ? (
-            <Hero big='THIRD HELLO.'/>
+            <Work big="WORKS."/>
           ): null}
-     
               <Container>
-                <Menu  inverted vertical pointing secondary size='massive'>
+                <Menu   vertical pointing secondary size='massive'>
                 <Menu.Item name='WORKS' active={activeItem === 'WORKS'} onClick={this.handleItemClick} />
                 <Menu.Item name='ABOUT' active={activeItem === 'ABOUT'} onClick={this.handleItemClick} />
                 <Menu.Item name='CONTACT' active={activeItem === 'CONTACT'} onClick={this.handleItemClick} />

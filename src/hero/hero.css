@@ -33,6 +33,6 @@
       display: none;
     }
     .hero{
-      color:white;
+      color:black !important;
     }
 }
