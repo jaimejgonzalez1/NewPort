@@ -103,12 +103,12 @@ class navbar extends Component {
             <Work big="WORKS."/>
           ): null}
               <Container>
-                <Menu   vertical pointing secondary size='massive'>
+                <Menu fixed="top"pointing secondary size='large'>
                 <Menu.Item name='WORKS' active={activeItem === 'WORKS'} onClick={this.handleItemClick} />
                 <Menu.Item name='ABOUT' active={activeItem === 'ABOUT'} onClick={this.handleItemClick} />
                 <Menu.Item name='CONTACT' active={activeItem === 'CONTACT'} onClick={this.handleItemClick} />
                 <Menu.Menu position='right'>
-                  <Menu.Item name='JAIME GONZALEZ' active={activeItem === 'JAIME GONZALEZ'} onClick={this.handleItemClick} />
+                  <Menu.Item name='JG' active={activeItem === 'JAIME GONZALEZ'} onClick={this.handleItemClick} />
                 </Menu.Menu>
               </Menu>
             </Container>

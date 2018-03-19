@@ -9,3 +9,15 @@
     flex-wrap: nowrap;
 }
 .shift{margin: 1%;text-decoration: none; color: black;}
+@media (max-width:600px){
+    .grid{
+        width: 100vw;
+        justify-content: center;
+        padding: 5%;
+    }
+    .icon{
+        display: none !important;
+    }
+ 
+
+}
