@@ -12,3 +12,7 @@
     font-size: 4em;
 
 }
+#navbar{
+    background-color: white;
+    z-index: 999;
+}

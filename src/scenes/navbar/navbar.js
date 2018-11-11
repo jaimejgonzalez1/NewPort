@@ -1,29 +1,23 @@
 import React, { Component } from 'react';
 import './navbar.css';
-import { Button, Icon } from 'semantic-ui-react';
 import {
   Container,
-  Divider,
-  Grid,
-  Header,
-  Image,
-  List,
   Menu,
   Responsive,
   Segment,
-  Sidebar,
   Visibility,
+  Image
 } from 'semantic-ui-react'
-import Hero from '../hero/hero';
+import Hero from '../../components/hero/hero';
 import Render from '../render/render';
 import SmallGrid from '../grid-sm/grid-sm';
-import Github from '../media/images/github-2.png'
-import LinkedIn from '../media/images/linkedin.png'
-import Mail from '../media/images/mail.png'
-import UP from '../media/images/up-arrow.png'
-import RightCard from '../rightCard/rightCard'
-import Work from '../works/works';
-
+import Github from '../../assets/media/images/github-2.png'
+import LinkedIn from '../../assets/media/images/linkedin.png'
+import Mail from '../../assets/media/images/mail.png'
+import UP from '../../assets/media/images/up-arrow.png'
+import RightCard from '../../components/rightCard/rightCard'
+import Work from '../works/works';  
+import Profile from '../../assets/media/images/cubism.png'
 class navbar extends Component {
 
   state = { activeItem: 'JAIME GONZALEZ' }
@@ -47,10 +41,10 @@ class navbar extends Component {
           ) : activeItem === 'ABOUT' ? (
             <div>
             <Hero big='ABOUT.'/>
-          
-            <RightCard para="I am a full-stack Software Developer with a focus on front-end technologies.
-            My most recent projects have been built in React, Node, and MongoDB however I started with 
-            Angular,.NET, and Sql Server but I'm very flexible to implement any technology that suits the project. 
+            <Image src={Profile} size='small' circular />
+            <RightCard para="I am a full-stack Software Developer with a focus on User Interfaces and User Experience.
+            My most recent work has been built in Angular, NodeJS, and MongoDB, however I started my career in 
+            .NET and Sql Server. Javascript is definitely my favorite. 
             "/>
             </div>
           ): activeItem === 'CONTACT' ? (
@@ -63,9 +57,8 @@ class navbar extends Component {
           ): null}
      
 
-{/* NavBar at Footer */}
             <Container>
-              <Menu pointing secondary fixed='bottom' size='massive'>
+              <Menu id='navbar' pointing secondary fixed='bottom' size='massive'>
               <Menu.Item name='WORKS' active={activeItem === 'WORKS'} onClick={this.handleItemClick} />
               <Menu.Item name='ABOUT' active={activeItem === 'ABOUT'} onClick={this.handleItemClick} />
               <Menu.Item name='CONTACT' active={activeItem === 'CONTACT'} onClick={this.handleItemClick} />
@@ -89,9 +82,9 @@ class navbar extends Component {
             <div>
             <Hero big='ABOUT.'/>
           
-            <RightCard para="I am a full-stack Software Developer with a focus on front-end technologies.
-            My most recent projects have been built in React, Node, and MongoDB however I started with 
-            Angular,.NET, and Sql Server but I'm very flexible to implement any technology that suits the project. 
+            <RightCard para="I am a full-stack Software Developer with a focus on User Interfaces and User Experience.
+            My most recent work has been built in Angular, NodeJS, and MongoDB, however I started my career in 
+            .NET and Sql Server. Javascript is definitely my favorite. 
             "/>
             </div>
           ): activeItem === 'CONTACT' ? (
@@ -103,8 +96,46 @@ class navbar extends Component {
             <Work big="WORKS."/>
           ): null}
               <Container>
-                <Menu fixed="top"pointing secondary size='large'>
-                <Menu.Item name='WORKS' active={activeItem === 'WORKS'} onClick={this.handleItemClick} />
+                <Menu id='navbar' fixed="top"pointing secondary size='large'>
+                <Menu.Item name='WORKS' active={activeItem === 'Experience'} onClick={this.handleItemClick} />
+                <Menu.Item name='ABOUT' active={activeItem === 'ABOUT'} onClick={this.handleItemClick} />
+                <Menu.Item name='CONTACT' active={activeItem === 'CONTACT'} onClick={this.handleItemClick} />
+                <Menu.Menu position='right'>
+                  <Menu.Item name='JG' active={activeItem === 'JAIME GONZALEZ'} onClick={this.handleItemClick} />
+                </Menu.Menu>
+              </Menu>
+            </Container>
+            </Segment>
+          </Visibility>
+      </Responsive>
+      <Responsive {...Responsive.onlyTablet}>
+      <Visibility>
+        <Segment textAlign='center' style={{ minHeight: 700, padding: '7em 0em' }} vertical>
+        {activeItem === 'JAIME GONZALEZ' ? (
+            <div>
+            <Hero small="Jaime Gonzalez | Full Stack Developer"/>
+            <Hero big="Hello."para="Come check out my work!"/>
+            </div>
+          ) : activeItem === 'ABOUT' ? (
+            <div>
+            <Hero big='ABOUT.'/>
+          
+            <RightCard para="I am a full-stack Software Developer with a focus on User Interfaces and User Experience.
+            My most recent work has been built in Angular, NodeJS, and MongoDB, however I started my career in 
+            .NET and Sql Server. Javascript is definitely my favorite. 
+            "/>
+            </div>
+          ): activeItem === 'CONTACT' ? (
+            <div>
+            <Hero big='CONTACT.' small="You can reach me anywhere"/>
+            <SmallGrid github= {Github} link ={LinkedIn} res={UP} mail={Mail}  />
+            </div>
+          ): activeItem === 'WORKS' ? (
+            <Work big="WORKS."/>
+          ): null}
+              <Container>
+                <Menu id='navbar'  fixed="top"pointing secondary size='large'>
+                <Menu.Item name='WORKS' active={activeItem === 'Experience'} onClick={this.handleItemClick} />
                 <Menu.Item name='ABOUT' active={activeItem === 'ABOUT'} onClick={this.handleItemClick} />
                 <Menu.Item name='CONTACT' active={activeItem === 'CONTACT'} onClick={this.handleItemClick} />
                 <Menu.Menu position='right'>

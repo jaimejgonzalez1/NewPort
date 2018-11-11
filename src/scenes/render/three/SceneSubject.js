@@ -1,5 +1,5 @@
 import * as THREE from 'three'
-import alphaTexture from '../../media/images/wall.jpg';
+import alphaTexture from '../../../assets/media/images/wall.jpg';
 
 export default scene => {    
     const group = new THREE.Group();
@@ -11,15 +11,11 @@ export default scene => {
     subjectMaterial.alphaMap.magFilter = THREE.NearestFilter;
     subjectMaterial.alphaMap.wrapT = THREE.RepeatWrapping;
     subjectMaterial.alphaMap.repeat.y = 1;
-
-    const subjectMesh = new THREE.Mesh(subjectGeometry, subjectMaterial);
-        
     const subjectWireframe = new THREE.LineSegments(
         new THREE.EdgesGeometry(subjectGeometry),
         new THREE.LineBasicMaterial()
     );
 
-    // group.add(subjectMesh);
     group.add(subjectWireframe);
     scene.add(group);
 

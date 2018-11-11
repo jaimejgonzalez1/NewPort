@@ -1,0 +1,81 @@
+.worksGrid{
+    width: 100vw;
+    height:80vh;
+    display: flex;
+    margin-bottom: 20%;
+    padding: 0 10%;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.worksHero{
+    flex-basis: 100%;
+}
+.container{
+    margin-top: 0 !important
+}
+.modal-container{
+    width: 100vw;
+    display: flex;
+    align-self: center;
+
+    color:white;
+
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.rowMobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    padding-top: 3%;
+}
+.columnMobile{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3%;
+    flex-basis: 80%;
+}
+.column-list{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70%;
+    padding: 12px;
+}
+.white{
+    color:white;
+}
+.ui.fullscreen.modal>.close{
+    color:white !important;
+}
+.image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+
+}
+.assureBackground{
+    background-color: white !important;
+    max-width: 600px;
+}
+.margin-none{
+    margin: 0 !important;
+}
+@media only screen and (max-width: 767px){
+    .ui.container {
+    margin: 0 !important;
+    }
+}

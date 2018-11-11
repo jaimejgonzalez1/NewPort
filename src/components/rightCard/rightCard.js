@@ -1,8 +1,7 @@
 import React , {Component}from 'react'
-import { CSSTransition } from 'react-transition-group'
-import { Header,Image} from 'semantic-ui-react';
+import { Header} from 'semantic-ui-react';
 import './rightCard.css';
-import HeadShot from '../media/images/some.jpg'
+
 
 class rightCard extends Component {
 
